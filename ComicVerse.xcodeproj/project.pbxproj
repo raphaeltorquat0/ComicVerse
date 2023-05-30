@@ -72,6 +72,7 @@
 				3F2952D32A26600D004441B9 /* Sources */,
 				3F2952D42A26600D004441B9 /* Frameworks */,
 				3F2952D52A26600D004441B9 /* Resources */,
+				3F2952E12A2660EC004441B9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -105,6 +106,9 @@
 				Base,
 			);
 			mainGroup = 3F2952CD2A26600C004441B9;
+			packageReferences = (
+				3F2952E22A2661C7004441B9 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = 3F2952D82A26600D004441B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -123,6 +127,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F2952E12A2660EC004441B9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F2952D32A26600D004441B9 /* Sources */ = {
@@ -338,6 +362,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3F2952E22A2661C7004441B9 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.52.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 3F2952CE2A26600C004441B9 /* Project object */;
 }
